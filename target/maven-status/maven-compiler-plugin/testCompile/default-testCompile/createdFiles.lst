@@ -1,0 +1,6 @@
+com/mulesoft/connectors/spiff/SpiffImportOperationsTest.class
+com/mulesoft/connectors/spiff/SpiffReportingOperationsTest.class
+com/mulesoft/connectors/spiff/internal/connection/SpiffOAuthConnectionTest.class
+com/mulesoft/connectors/spiff/SpiffErrorTypeTest.class
+com/mulesoft/connectors/spiff/HmacSignatureUtilTest.class
+com/mulesoft/connectors/spiff/SpiffObjectOperationsTest.class

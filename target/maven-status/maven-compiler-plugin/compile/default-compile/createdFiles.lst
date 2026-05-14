@@ -1,0 +1,15 @@
+com/mulesoft/connectors/spiff/api/SpiffAttributes.class
+com/mulesoft/connectors/spiff/internal/operation/SpiffReportingOperations.class
+com/mulesoft/connectors/spiff/internal/util/HmacSignatureUtil.class
+com/mulesoft/connectors/spiff/internal/connection/SpiffHmacConnection.class
+com/mulesoft/connectors/spiff/internal/error/SpiffErrorTypeProvider.class
+com/mulesoft/connectors/spiff/internal/operation/SpiffObjectOperations.class
+com/mulesoft/connectors/spiff/internal/connection/SpiffOAuthConnectionProvider.class
+com/mulesoft/connectors/spiff/internal/error/SpiffErrorType.class
+com/mulesoft/connectors/spiff/internal/connection/SpiffHmacConnectionProvider.class
+com/mulesoft/connectors/spiff/internal/config/SpiffReportingConfiguration.class
+com/mulesoft/connectors/spiff/internal/util/HttpClientUtil.class
+com/mulesoft/connectors/spiff/internal/operation/SpiffImportOperations.class
+com/mulesoft/connectors/spiff/internal/connection/SpiffOAuthConnection.class
+com/mulesoft/connectors/spiff/internal/config/SpiffHmacConfiguration.class
+com/mulesoft/connectors/spiff/internal/SpiffExtension.class

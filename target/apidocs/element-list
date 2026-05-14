@@ -1,0 +1,7 @@
+com.mulesoft.connectors.spiff.api
+com.mulesoft.connectors.spiff.internal
+com.mulesoft.connectors.spiff.internal.config
+com.mulesoft.connectors.spiff.internal.connection
+com.mulesoft.connectors.spiff.internal.error
+com.mulesoft.connectors.spiff.internal.operation
+com.mulesoft.connectors.spiff.internal.util

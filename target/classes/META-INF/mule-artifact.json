@@ -1,0 +1,13 @@
+{
+  "name": "Salesforce SPIFF Connector",
+  "minMuleVersion": "4.9.0",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [
+        "com.mulesoft.connectors.spiff.api"
+      ],
+      "exportedResources": []
+    }
+  }
+}
