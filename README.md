@@ -1,4 +1,4 @@
-# Salesforce SPIFF Connector for MuleSoft
+# MuleSoft SPIFF Connector  
 
 A custom MuleSoft connector that provides native integration with the **Salesforce SPIFF** Incentive Compensation Management platform. The connector supports three SPIFF API domains with two distinct authentication mechanisms, enabling MuleSoft developers to build commission management integrations directly within Anypoint Studio.
 
