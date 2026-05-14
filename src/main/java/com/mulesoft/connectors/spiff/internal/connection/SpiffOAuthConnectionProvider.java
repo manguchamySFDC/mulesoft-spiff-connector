@@ -4,6 +4,7 @@ import org.mule.runtime.api.connection.CachedConnectionProvider;
 import org.mule.runtime.api.connection.ConnectionException;
 import org.mule.runtime.api.connection.ConnectionValidationResult;
 import org.mule.runtime.extension.api.annotation.Alias;
+import org.mule.runtime.extension.api.annotation.param.Optional;
 import org.mule.runtime.extension.api.annotation.param.Parameter;
 import org.mule.runtime.extension.api.annotation.param.display.DisplayName;
 import org.mule.runtime.extension.api.annotation.param.display.Placement;
@@ -31,9 +32,16 @@ public class SpiffOAuthConnectionProvider implements CachedConnectionProvider<Sp
     @Placement(order = 3)
     private String clientSecret;
 
+    @Parameter
+    @Optional(defaultValue = "60")
+    @DisplayName("Token Refresh Buffer (seconds)")
+    @Summary("Seconds before token expiry to trigger a refresh. Default: 60")
+    @Placement(order = 4)
+    private int tokenRefreshBufferSeconds;
+
     @Override
     public SpiffOAuthConnection connect() throws ConnectionException {
-        return new SpiffOAuthConnection(subdomain, clientId, clientSecret);
+        return new SpiffOAuthConnection(subdomain, clientId, clientSecret, tokenRefreshBufferSeconds);
     }
 
     @Override

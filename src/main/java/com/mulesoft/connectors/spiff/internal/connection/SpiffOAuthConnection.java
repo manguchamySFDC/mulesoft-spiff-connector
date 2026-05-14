@@ -16,19 +16,19 @@ import java.util.Map;
  */
 public class SpiffOAuthConnection {
 
-    private static final long TOKEN_REFRESH_BUFFER_SECONDS = 60;
-
     private final String subdomain;
     private final String clientId;
     private final String clientSecret;
+    private final long tokenRefreshBufferSeconds;
 
     private String accessToken;
     private long tokenExpiresAt;
 
-    public SpiffOAuthConnection(String subdomain, String clientId, String clientSecret) {
+    public SpiffOAuthConnection(String subdomain, String clientId, String clientSecret, int tokenRefreshBufferSeconds) {
         this.subdomain = subdomain;
         this.clientId = clientId;
         this.clientSecret = clientSecret;
+        this.tokenRefreshBufferSeconds = tokenRefreshBufferSeconds > 0 ? tokenRefreshBufferSeconds : 60;
         this.tokenExpiresAt = 0;
     }
 
@@ -90,7 +90,7 @@ public class SpiffOAuthConnection {
 
         String expiresInStr = extractJsonNumericValue(responseBody, "expires_in");
         long expiresIn = expiresInStr != null ? Long.parseLong(expiresInStr) : 3600;
-        this.tokenExpiresAt = Instant.now().getEpochSecond() + expiresIn - TOKEN_REFRESH_BUFFER_SECONDS;
+        this.tokenExpiresAt = Instant.now().getEpochSecond() + expiresIn - tokenRefreshBufferSeconds;
     }
 
     private Map<String, String> buildAuthHeaders() {

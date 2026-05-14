@@ -8,7 +8,7 @@ import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProvider
 import org.mule.runtime.extension.api.annotation.param.display.DisplayName;
 
 @Configuration(name = "oauth-config")
-@DisplayName("SPIFF OAuth Configuration (Reporting API)")
+@DisplayName("OAuth (Reporting API)")
 @Operations(SpiffReportingOperations.class)
 @ConnectionProviders(SpiffOAuthConnectionProvider.class)
 public class SpiffReportingConfiguration {

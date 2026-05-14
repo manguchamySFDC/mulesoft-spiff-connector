@@ -48,13 +48,13 @@ public class SpiffOAuthConnectionTest {
 
     @Test
     public void baseUrlConstructedCorrectly() {
-        SpiffOAuthConnection conn = new SpiffOAuthConnection("us1", "id", "secret");
+        SpiffOAuthConnection conn = new SpiffOAuthConnection("us1", "id", "secret", 60);
         assertEquals("https://us1.spiff.com/api/v1", conn.getBaseUrl());
     }
 
     @Test
     public void baseUrlWithEuSubdomain() {
-        SpiffOAuthConnection conn = new SpiffOAuthConnection("eu1", "id", "secret");
+        SpiffOAuthConnection conn = new SpiffOAuthConnection("eu1", "id", "secret", 60);
         assertEquals("https://eu1.spiff.com/api/v1", conn.getBaseUrl());
     }
 }

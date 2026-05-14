@@ -9,7 +9,7 @@ import org.mule.runtime.extension.api.annotation.connectivity.ConnectionProvider
 import org.mule.runtime.extension.api.annotation.param.display.DisplayName;
 
 @Configuration(name = "hmac-config")
-@DisplayName("SPIFF HMAC Configuration (Import & Object APIs)")
+@DisplayName("HMAC (Import & Object APIs)")
 @Operations({SpiffImportOperations.class, SpiffObjectOperations.class})
 @ConnectionProviders(SpiffHmacConnectionProvider.class)
 public class SpiffHmacConfiguration {
